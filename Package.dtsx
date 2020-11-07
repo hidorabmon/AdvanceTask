@@ -11,8 +11,8 @@
   DTS:LocaleID="3081"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="118"
-  DTS:VersionGUID="{08ED6C63-1C1B-4AEA-892F-60BCF831C8F9}">
+  DTS:VersionBuild="121"
+  DTS:VersionGUID="{07F38938-79E5-4066-88D6-A108B23B7687}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -4557,6 +4557,24 @@ where [refTable].[StateCode] = ?</property>
                           lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[Category]"
                           name="Category"
                           truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[Month]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].ExternalColumns[Month]"
+                          lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[Month]"
+                          name="Month"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[Day]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].ExternalColumns[Day]"
+                          lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[Day]"
+                          name="Day"
+                          truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -4615,6 +4633,14 @@ where [refTable].[StateCode] = ?</property>
                           dataType="wstr"
                           length="200"
                           name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].ExternalColumns[Month]"
+                          dataType="i4"
+                          name="Month" />
+                        <externalMetadataColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].ExternalColumns[Day]"
+                          dataType="i4"
+                          name="Day" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -4688,6 +4714,16 @@ where [refTable].[StateCode] = ?</property>
                           length="200"
                           lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Error Output].Columns[Category]"
                           name="Category" />
+                        <outputColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Error Output].Columns[Month]"
+                          dataType="i4"
+                          lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Error Output].Columns[Month]"
+                          name="Month" />
+                        <outputColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Error Output].Columns[Day]"
+                          dataType="i4"
+                          lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Error Output].Columns[Day]"
+                          name="Day" />
                         <outputColumn
                           refId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
@@ -4796,22 +4832,6 @@ where [refTable].[StateCode] = ?</property>
                           externalMetadataColumnId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].ExternalColumns[CrimeCases]"
                           lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[CrimeCases]" />
                         <inputColumn
-                          refId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].Columns[CrimeLat]"
-                          cachedCodepage="950"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="CrimeLat"
-                          externalMetadataColumnId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].ExternalColumns[CrimeLat]"
-                          lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[CrimeLat]" />
-                        <inputColumn
-                          refId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].Columns[CrimeLon]"
-                          cachedCodepage="950"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="CrimeLon"
-                          externalMetadataColumnId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].ExternalColumns[CrimeLon]"
-                          lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[CrimeLon]" />
-                        <inputColumn
                           refId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].Columns[Category]"
                           cachedDataType="wstr"
                           cachedLength="200"
@@ -4836,6 +4856,12 @@ where [refTable].[StateCode] = ?</property>
                           cachedName="DWStateKey"
                           externalMetadataColumnId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].ExternalColumns[StateID]"
                           lineageId="Package\Fact Table\FactCrimeByYear\Lookup State ID.Outputs[Lookup Match Output].Columns[DWStateKey]" />
+                        <inputColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                          cachedDataType="i4"
+                          cachedName="DateKey"
+                          externalMetadataColumnId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                          lineageId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -4868,22 +4894,14 @@ where [refTable].[StateCode] = ?</property>
                           dataType="i4"
                           name="CrimeCases" />
                         <externalMetadataColumn
-                          refId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].ExternalColumns[CrimeLat]"
-                          codePage="950"
-                          dataType="str"
-                          length="50"
-                          name="CrimeLat" />
-                        <externalMetadataColumn
-                          refId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].ExternalColumns[CrimeLon]"
-                          codePage="950"
-                          dataType="str"
-                          length="50"
-                          name="CrimeLon" />
-                        <externalMetadataColumn
                           refId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
                           dataType="wstr"
                           length="200"
                           name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Load to FactCrimeByYear.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                          dataType="i4"
+                          name="DateKey" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -5150,6 +5168,196 @@ where [refTable].[StateCode] = ?</property>
                           refId="Package\Fact Table\FactCrimeByYear\Load to No Match Crime.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\Fact Table\FactCrimeByYear\Load to No Match Crime.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup DateKey"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimDate]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimDate]) [refTable]
+where [refTable].[Year] = ? and [refTable].[MonthOfYear] = ? and [refTable].[DayOfMonth] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Date" dataType="DT_DBTIMESTAMP2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="QuarterOfYear" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthOfYear" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfMonth" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateInt" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[Year]};#{Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[Month]};#{Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[Day]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.AdvancePart2]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.AdvancePart2]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Inputs[Lookup Input].Columns[Year]"
+                          cachedDataType="i4"
+                          cachedName="Year"
+                          lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[Year]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">Year</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Inputs[Lookup Input].Columns[Month]"
+                          cachedDataType="i4"
+                          cachedName="Month"
+                          lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[Month]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">MonthOfYear</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Inputs[Lookup Input].Columns[Day]"
+                          cachedDataType="i4"
+                          cachedName="Day"
+                          lineageId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output].Columns[Day]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">DayOfMonth</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]"
+                          name="DateKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">DateInt</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -5523,13 +5731,18 @@ where [refTable].[StateCode] = ?</property>
                   name="Lookup Match Output"
                   startId="Package\Fact Table\FactCrimeByYear\Lookup GeoID.Outputs[Lookup Match Output]" />
                 <path
+                  refId="Package\Fact Table\FactCrimeByYear.Paths[Lookup Match Output2]"
+                  endId="Package\Fact Table\FactCrimeByYear\Lookup State ID.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Outputs[Lookup Match Output]" />
+                <path
                   refId="Package\Fact Table\FactCrimeByYear.Paths[Lookup No Match Output]"
                   endId="Package\Fact Table\FactCrimeByYear\Load to No Match Crime.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
                   startId="Package\Fact Table\FactCrimeByYear\Lookup GeoID.Outputs[Lookup No Match Output]" />
                 <path
                   refId="Package\Fact Table\FactCrimeByYear.Paths[OLE DB Source Output]"
-                  endId="Package\Fact Table\FactCrimeByYear\Lookup State ID.Inputs[Lookup Input]"
+                  endId="Package\Fact Table\FactCrimeByYear\Lookup DateKey.Inputs[Lookup Input]"
                   name="OLE DB Source Output"
                   startId="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear.Outputs[OLE DB Source Output]" />
               </paths>
@@ -5658,6 +5871,12 @@ where [refTable].[StateCode] = ?</property>
                           cachedName="DWStateKey"
                           externalMetadataColumnId="Package\Fact Table\FactMedianPropertyValueByYear\FactMedianPropertyValueByYear.Inputs[OLE DB Destination Input].ExternalColumns[StateID]"
                           lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup StateID.Outputs[Lookup Match Output].Columns[DWStateKey]" />
+                        <inputColumn
+                          refId="Package\Fact Table\FactMedianPropertyValueByYear\FactMedianPropertyValueByYear.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                          cachedDataType="i4"
+                          cachedName="DateKey"
+                          externalMetadataColumnId="Package\Fact Table\FactMedianPropertyValueByYear\FactMedianPropertyValueByYear.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                          lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -5689,6 +5908,10 @@ where [refTable].[StateCode] = ?</property>
                           refId="Package\Fact Table\FactMedianPropertyValueByYear\FactMedianPropertyValueByYear.Inputs[OLE DB Destination Input].ExternalColumns[UpdateMonth]"
                           dataType="i4"
                           name="UpdateMonth" />
+                        <externalMetadataColumn
+                          refId="Package\Fact Table\FactMedianPropertyValueByYear\FactMedianPropertyValueByYear.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                          dataType="i4"
+                          name="DateKey" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -5856,6 +6079,15 @@ where [refTable].[StateCode] = ?</property>
                           lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].Columns[UpdateMonth]"
                           name="UpdateMonth"
                           truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].Columns[day]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].ExternalColumns[day]"
+                          lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].Columns[day]"
+                          name="day"
+                          truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -5897,6 +6129,10 @@ where [refTable].[StateCode] = ?</property>
                           refId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].ExternalColumns[UpdateMonth]"
                           dataType="i4"
                           name="UpdateMonth" />
+                        <externalMetadataColumn
+                          refId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].ExternalColumns[day]"
+                          dataType="i4"
+                          name="day" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -5951,6 +6187,11 @@ where [refTable].[StateCode] = ?</property>
                           lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Error Output].Columns[UpdateMonth]"
                           name="UpdateMonth" />
                         <outputColumn
+                          refId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Error Output].Columns[day]"
+                          dataType="i4"
+                          lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Error Output].Columns[day]"
+                          name="day" />
+                        <outputColumn
                           refId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
                           lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
@@ -5960,6 +6201,196 @@ where [refTable].[StateCode] = ?</property>
                           refId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup DateKey"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimDate]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimDate]) [refTable]
+where [refTable].[Year] = ? and [refTable].[MonthOfYear] = ? and [refTable].[DayOfMonth] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Date" dataType="DT_DBTIMESTAMP2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="QuarterOfYear" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthOfYear" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfMonth" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateInt" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].Columns[UpdateYear]};#{Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].Columns[UpdateMonth]};#{Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].Columns[day]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.AdvancePart2]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.AdvancePart2]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Inputs[Lookup Input].Columns[UpdateYear]"
+                          cachedDataType="i4"
+                          cachedName="UpdateYear"
+                          lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].Columns[UpdateYear]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">Year</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Inputs[Lookup Input].Columns[day]"
+                          cachedDataType="i4"
+                          cachedName="day"
+                          lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].Columns[day]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">DayOfMonth</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Inputs[Lookup Input].Columns[UpdateMonth]"
+                          cachedDataType="i4"
+                          cachedName="UpdateMonth"
+                          lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output].Columns[UpdateMonth]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">MonthOfYear</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]"
+                          name="DateKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">DateInt</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -6549,13 +6980,18 @@ where [refTable].[StateCode] = ?</property>
                   name="Lookup Match Output"
                   startId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup GeoID.Outputs[Lookup Match Output]" />
                 <path
+                  refId="Package\Fact Table\FactMedianPropertyValueByYear.Paths[Lookup Match Output2]"
+                  endId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup StateID.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Outputs[Lookup Match Output]" />
+                <path
                   refId="Package\Fact Table\FactMedianPropertyValueByYear.Paths[Lookup No Match Output]"
                   endId="Package\Fact Table\FactMedianPropertyValueByYear\NoMatchProperty.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
                   startId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup GeoID.Outputs[Lookup No Match Output]" />
                 <path
                   refId="Package\Fact Table\FactMedianPropertyValueByYear.Paths[OLE DB Source Output]"
-                  endId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup StateID.Inputs[Lookup Input]"
+                  endId="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey.Inputs[Lookup Input]"
                   name="OLE DB Source Output"
                   startId="Package\Fact Table\FactMedianPropertyValueByYear\Get Data From FactMedianPropertyValueByYear.Outputs[OLE DB Source Output]" />
               </paths>
@@ -6678,6 +7114,12 @@ where [refTable].[StateCode] = ?</property>
                           cachedName="DWStateKey"
                           externalMetadataColumnId="Package\Fact Table\FactSuburbPopulation\FactSuburbPopulation.Inputs[OLE DB Destination Input].ExternalColumns[StateID]"
                           lineageId="Package\Fact Table\FactSuburbPopulation\Lookup StateID.Outputs[Lookup Match Output].Columns[DWStateKey]" />
+                        <inputColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\FactSuburbPopulation.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                          cachedDataType="i4"
+                          cachedName="DateKey"
+                          externalMetadataColumnId="Package\Fact Table\FactSuburbPopulation\FactSuburbPopulation.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                          lineageId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]" />
                       </inputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -6705,6 +7147,10 @@ where [refTable].[StateCode] = ?</property>
                           refId="Package\Fact Table\FactSuburbPopulation\FactSuburbPopulation.Inputs[OLE DB Destination Input].ExternalColumns[Year]"
                           dataType="i4"
                           name="Year" />
+                        <externalMetadataColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\FactSuburbPopulation.Inputs[OLE DB Destination Input].ExternalColumns[DateKey]"
+                          dataType="i4"
+                          name="DateKey" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -6852,6 +7298,24 @@ where [refTable].[StateCode] = ?</property>
                           lineageId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].Columns[Year]"
                           name="Year"
                           truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].Columns[Month]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].ExternalColumns[Month]"
+                          lineageId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].Columns[Month]"
+                          name="Month"
+                          truncationRowDisposition="FailComponent" />
+                        <outputColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].Columns[Day]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].ExternalColumns[Day]"
+                          lineageId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].Columns[Day]"
+                          name="Day"
+                          truncationRowDisposition="FailComponent" />
                       </outputColumns>
                       <externalMetadataColumns
                         isUsed="True">
@@ -6883,6 +7347,14 @@ where [refTable].[StateCode] = ?</property>
                           refId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].ExternalColumns[Year]"
                           dataType="i4"
                           name="Year" />
+                        <externalMetadataColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].ExternalColumns[Month]"
+                          dataType="i4"
+                          name="Month" />
+                        <externalMetadataColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].ExternalColumns[Day]"
+                          dataType="i4"
+                          name="Day" />
                       </externalMetadataColumns>
                     </output>
                     <output
@@ -6925,6 +7397,16 @@ where [refTable].[StateCode] = ?</property>
                           lineageId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Error Output].Columns[Year]"
                           name="Year" />
                         <outputColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Error Output].Columns[Month]"
+                          dataType="i4"
+                          lineageId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Error Output].Columns[Month]"
+                          name="Month" />
+                        <outputColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Error Output].Columns[Day]"
+                          dataType="i4"
+                          lineageId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Error Output].Columns[Day]"
+                          name="Day" />
+                        <outputColumn
                           refId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                           dataType="i4"
                           lineageId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
@@ -6934,6 +7416,196 @@ where [refTable].[StateCode] = ?</property>
                           refId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                           dataType="i4"
                           lineageId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey"
+                  componentClassID="Microsoft.Lookup"
+                  contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+                  description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+                  name="Lookup DateKey"
+                  usesDispositions="true"
+                  version="6">
+                  <properties>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the SQL statement that generates the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[DimDate]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                      expressionType="Notify"
+                      name="SqlCommandParam"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[DimDate]) [refTable]
+where [refTable].[Year] = ? and [refTable].[MonthOfYear] = ? and [refTable].[DayOfMonth] = ?</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the type of connection used to access the reference dataset."
+                      name="ConnectionType"
+                      typeConverter="LookupConnectionType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the cache type of the lookup table."
+                      name="CacheType"
+                      typeConverter="CacheType">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                      name="NoMatchBehavior"
+                      typeConverter="LookupNoMatchBehavior">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                      name="NoMatchCachePercentage">0</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                      name="MaxMemoryUsage">25</property>
+                    <property
+                      dataType="System.Int64"
+                      description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                      name="MaxMemoryUsage64">25</property>
+                    <property
+                      dataType="System.String"
+                      description="Indicates whether to reference metadata in an XML format."
+                      name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="Date" dataType="DT_DBTIMESTAMP2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="Year" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="QuarterOfYear" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthOfYear" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayOfMonth" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DateInt" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                      name="ParameterMap">#{Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].Columns[Year]};#{Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].Columns[Month]};#{Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].Columns[Day]};</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                      name="TreatDuplicateKeysAsError">false</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[localhost.AdvancePart2]"
+                      connectionManagerRefId="Package.ConnectionManagers[localhost.AdvancePart2]"
+                      description="Connection manager used to access lookup data."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Inputs[Lookup Input]"
+                      name="Lookup Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Inputs[Lookup Input].Columns[Day]"
+                          cachedDataType="i4"
+                          cachedName="Day"
+                          lineageId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].Columns[Day]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">DayOfMonth</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Inputs[Lookup Input].Columns[Month]"
+                          cachedDataType="i4"
+                          cachedName="Month"
+                          lineageId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].Columns[Month]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">MonthOfYear</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                        <inputColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Inputs[Lookup Input].Columns[Year]"
+                          cachedDataType="i4"
+                          cachedName="Year"
+                          lineageId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output].Columns[Year]">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table that a column joins."
+                              name="JoinToReferenceColumn">Year</property>
+                            <property
+                              dataType="System.Null"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn" />
+                          </properties>
+                        </inputColumn>
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Outputs[Lookup Match Output]"
+                      errorOrTruncationOperation="Lookup"
+                      errorRowDisposition="FailComponent"
+                      exclusionGroup="1"
+                      name="Lookup Match Output"
+                      synchronousInputId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]"
+                          dataType="i4"
+                          errorOrTruncationOperation="Copy Column"
+                          lineageId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Outputs[Lookup Match Output].Columns[DateKey]"
+                          name="DateKey"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.String"
+                              description="Specifies the column in the reference table from which a column is copied."
+                              name="CopyFromReferenceColumn">DateInt</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Outputs[Lookup No Match Output]"
+                      description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                      exclusionGroup="1"
+                      name="Lookup No Match Output"
+                      synchronousInputId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Inputs[Lookup Input]">
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Outputs[Lookup Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Lookup Error Output"
+                      synchronousInputId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Inputs[Lookup Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                           name="ErrorColumn"
                           specialFlags="2" />
                       </outputColumns>
@@ -7468,13 +8140,18 @@ where [refTable].[StateCode] = ?</property>
                   name="Lookup Match Output"
                   startId="Package\Fact Table\FactSuburbPopulation\Lookup GeoID.Outputs[Lookup Match Output]" />
                 <path
+                  refId="Package\Fact Table\FactSuburbPopulation.Paths[Lookup Match Output2]"
+                  endId="Package\Fact Table\FactSuburbPopulation\Lookup StateID.Inputs[Lookup Input]"
+                  name="Lookup Match Output"
+                  startId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Outputs[Lookup Match Output]" />
+                <path
                   refId="Package\Fact Table\FactSuburbPopulation.Paths[Lookup No Match Output]"
                   endId="Package\Fact Table\FactSuburbPopulation\NoMatchGeoID.Inputs[OLE DB Destination Input]"
                   name="Lookup No Match Output"
                   startId="Package\Fact Table\FactSuburbPopulation\Lookup GeoID.Outputs[Lookup No Match Output]" />
                 <path
                   refId="Package\Fact Table\FactSuburbPopulation.Paths[OLE DB Source Output]"
-                  endId="Package\Fact Table\FactSuburbPopulation\Lookup StateID.Inputs[Lookup Input]"
+                  endId="Package\Fact Table\FactSuburbPopulation\Lookup DateKey.Inputs[Lookup Input]"
                   name="OLE DB Source Output"
                   startId="Package\Fact Table\FactSuburbPopulation\Get Data from StgFactSuburbPopulation.Outputs[OLE DB Source Output]" />
               </paths>
@@ -7581,22 +8258,6 @@ where [refTable].[StateCode] = ?</property>
                           externalMetadataColumnId="Package\Fact Table\FactSuburbRentalMedian\FactSuburbRentalMedian.Inputs[OLE DB Destination Input].ExternalColumns[Rent]"
                           lineageId="Package\Fact Table\FactSuburbRentalMedian\Get Data From StgFactSuburbRentalMedian.Outputs[OLE DB Source Output].Columns[Rent]" />
                         <inputColumn
-                          refId="Package\Fact Table\FactSuburbRentalMedian\FactSuburbRentalMedian.Inputs[OLE DB Destination Input].Columns[RentalLat]"
-                          cachedCodepage="950"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="RentalLat"
-                          externalMetadataColumnId="Package\Fact Table\FactSuburbRentalMedian\FactSuburbRentalMedian.Inputs[OLE DB Destination Input].ExternalColumns[RentalLat]"
-                          lineageId="Package\Fact Table\FactSuburbRentalMedian\Get Data From StgFactSuburbRentalMedian.Outputs[OLE DB Source Output].Columns[RentalLat]" />
-                        <inputColumn
-                          refId="Package\Fact Table\FactSuburbRentalMedian\FactSuburbRentalMedian.Inputs[OLE DB Destination Input].Columns[RentalLon]"
-                          cachedCodepage="950"
-                          cachedDataType="str"
-                          cachedLength="50"
-                          cachedName="RentalLon"
-                          externalMetadataColumnId="Package\Fact Table\FactSuburbRentalMedian\FactSuburbRentalMedian.Inputs[OLE DB Destination Input].ExternalColumns[RentalLon]"
-                          lineageId="Package\Fact Table\FactSuburbRentalMedian\Get Data From StgFactSuburbRentalMedian.Outputs[OLE DB Source Output].Columns[RentalLon]" />
-                        <inputColumn
                           refId="Package\Fact Table\FactSuburbRentalMedian\FactSuburbRentalMedian.Inputs[OLE DB Destination Input].Columns[GeoID]"
                           cachedDataType="i4"
                           cachedName="GeoID"
@@ -7642,18 +8303,6 @@ where [refTable].[StateCode] = ?</property>
                           refId="Package\Fact Table\FactSuburbRentalMedian\FactSuburbRentalMedian.Inputs[OLE DB Destination Input].ExternalColumns[Rent]"
                           dataType="cy"
                           name="Rent" />
-                        <externalMetadataColumn
-                          refId="Package\Fact Table\FactSuburbRentalMedian\FactSuburbRentalMedian.Inputs[OLE DB Destination Input].ExternalColumns[RentalLat]"
-                          codePage="950"
-                          dataType="str"
-                          length="50"
-                          name="RentalLat" />
-                        <externalMetadataColumn
-                          refId="Package\Fact Table\FactSuburbRentalMedian\FactSuburbRentalMedian.Inputs[OLE DB Destination Input].ExternalColumns[RentalLon]"
-                          codePage="950"
-                          dataType="str"
-                          length="50"
-                          name="RentalLon" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -9971,6 +10620,10 @@ where [refTable].[StateCode] = ?</property>
                           refId="Package\Fact Table\StgFactMedianPropertyValueByYear\Load to StgFactMedianPropertyValueByYear.Inputs[OLE DB Destination Input].ExternalColumns[UpdateMonth]"
                           dataType="i4"
                           name="UpdateMonth" />
+                        <externalMetadataColumn
+                          refId="Package\Fact Table\StgFactMedianPropertyValueByYear\Load to StgFactMedianPropertyValueByYear.Inputs[OLE DB Destination Input].ExternalColumns[day]"
+                          dataType="i4"
+                          name="day" />
                       </externalMetadataColumns>
                     </input>
                   </inputs>
@@ -14191,7 +14844,7 @@ Order by State ASC</property>
         <NodeLayout
           Size="156,42.6666666666667"
           Id="Package\Fact Table\FactCrimeByYear\Lookup State ID"
-          TopLeft="260.000005438924,112.000000697374" />
+          TopLeft="256.000005438924,148.000000697374" />
         <NodeLayout
           Size="245.333333333334,42.6666666666667"
           Id="Package\Fact Table\FactCrimeByYear\Get data From StgFactCrimeByYear"
@@ -14200,30 +14853,6 @@ Order by State ASC</property>
           Size="193.333333333334,42.6666666666667"
           Id="Package\Fact Table\FactCrimeByYear\Load to No Match Crime"
           TopLeft="635.937490523793,207.541663789998" />
-        <EdgeLayout
-          Id="Package\Fact Table\FactCrimeByYear.Paths[OLE DB Source Output]"
-          TopLeft="338.333338772257,58.666667364041">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,53.3333333333333"
-              Start="0,0"
-              End="0,45.8333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,45.8333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Table\FactCrimeByYear.Paths[Lookup No Match Output]"
           TopLeft="612.069436761033,152.354164705301">
@@ -14256,7 +14885,7 @@ Order by State ASC</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="4.46097349596311,27.4323287646427,111.6127734375,11.609375"
+              BoundingBox="4.460973495963,27.4323287646427,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14298,25 +14927,99 @@ Order by State ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Table\FactCrimeByYear.Paths[Lookup Match Output]"
-          TopLeft="416.000005438924,132.177082701338">
+          TopLeft="412.000005438924,169.333334030707">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="99.6249868776649,0"
+              EndConnector="103.624986877665,-38.312502658739"
               Start="0,0"
-              End="92.1249868776649,0">
+              End="96.124986877665,-38.312502658739">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="92.1249868776649,0" />
+                    End="47.8124934388325,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="47.8124934388325,0"
+                    Point2="51.8124934388325,0"
+                    Point3="51.8124934388325,-4" />
+                  <mssgle:LineSegment
+                    End="51.8124934388325,-34.312502658739" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.8124934388325,-34.312502658739"
+                    Point2="51.8124934388325,-38.312502658739"
+                    Point3="55.8124934388325,-38.312502658739" />
+                  <mssgle:LineSegment
+                    End="96.124986877665,-38.312502658739" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-2.12889327991754,5,96.3827734375,11.609375"
+              BoundingBox="3.62110672008249,1,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Fact Table\FactCrimeByYear\Lookup DateKey"
+          TopLeft="262,86" />
+        <EdgeLayout
+          Id="Package\Fact Table\FactCrimeByYear.Paths[OLE DB Source Output]"
+          TopLeft="339.333336052795,58.666667364041">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,27.3333326359591"
+              Start="0,0"
+              End="0,19.8333326359591">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.8333326359591" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Table\FactCrimeByYear.Paths[Lookup Match Output2]"
+          TopLeft="418,107.333333333333">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-5.99999456107599,56.2222229195962"
+              Start="0,0"
+              End="1.50000543892401,56.2222229195962">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="18.5,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="18.5,0"
+                    Point2="22.5,0"
+                    Point3="22.5,4" />
+                  <mssgle:LineSegment
+                    End="22.5,52.2222229195962" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.5,52.2222229195962"
+                    Point2="22.5,56.2222229195962"
+                    Point3="18.5,56.2222229195962" />
+                  <mssgle:LineSegment
+                    End="1.50000543892401,56.2222229195962" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-25.69138671875,-17.609375,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14434,40 +15137,6 @@ Order by State ASC</property>
           Id="Package\Fact Table\FactMedianPropertyValueByYear\Lookup StateID"
           TopLeft="485,186" />
         <EdgeLayout
-          Id="Package\Fact Table\FactMedianPropertyValueByYear.Paths[OLE DB Source Output]"
-          TopLeft="687,117.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-126,68.333333333333"
-              Start="0,0"
-              End="-126,60.833333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.1666666666665" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.1666666666665"
-                    Point2="0,34.1666666666665"
-                    Point3="-4,34.1666666666665" />
-                  <mssgle:LineSegment
-                    End="-122,34.1666666666665" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-122,34.1666666666665"
-                    Point2="-126,34.1666666666665"
-                    Point3="-126,38.1666666666665" />
-                  <mssgle:LineSegment
-                    End="-126,60.833333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Fact Table\FactMedianPropertyValueByYear.Paths[Lookup No Match Output]"
           TopLeft="785.444444444444,230.666666666666">
           <EdgeLayout.Curve>
@@ -14499,7 +15168,7 @@ Order by State ASC</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-1.52860894097228,36.5695443645084,111.6127734375,11.609375"
+              BoundingBox="-1.5286089409725,36.5695443645084,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14560,6 +15229,68 @@ Order by State ASC</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-25.94138671875,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey"
+          TopLeft="293,183.333333333333" />
+        <EdgeLayout
+          Id="Package\Fact Table\FactMedianPropertyValueByYear.Paths[OLE DB Source Output]"
+          TopLeft="687,117.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-316,65.6666666666667"
+              Start="0,0"
+              End="-316,58.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,28.8333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,28.8333333333333"
+                    Point2="0,32.8333333333333"
+                    Point3="-4,32.8333333333333" />
+                  <mssgle:LineSegment
+                    End="-312,32.8333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-312,32.8333333333333"
+                    Point2="-316,32.8333333333333"
+                    Point3="-316,36.8333333333333" />
+                  <mssgle:LineSegment
+                    End="-316,58.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Table\FactMedianPropertyValueByYear.Paths[Lookup Match Output2]"
+          TopLeft="449,206">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="36,0"
+              Start="0,0"
+              End="28.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="28.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-33.94138671875,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14664,42 +15395,6 @@ Order by State ASC</property>
           Id="Package\Fact Table\FactSuburbPopulation\FactSuburbPopulation"
           TopLeft="645,287.666666666667" />
         <EdgeLayout
-          Id="Package\Fact Table\FactSuburbPopulation.Paths[OLE DB Source Output]"
-          TopLeft="638,108.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-111,69.3333333333333"
-              Start="0,0"
-              End="-111,61.8333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.6666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,30.6666666666667"
-                    Point2="0,34.6666666666667"
-                    Point3="-4,34.6666666666667" />
-                  <mssgle:LineSegment
-                    End="-107,34.6666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-107,34.6666666666667"
-                    Point2="-111,34.6666666666667"
-                    Point3="-111,38.6666666666667" />
-                  <mssgle:LineSegment
-                    End="-111,61.8333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Fact Table\FactSuburbPopulation.Paths[Lookup No Match Output]"
           TopLeft="759.444444444444,221.666666666667">
           <EdgeLayout.Curve>
@@ -14731,7 +15426,7 @@ Order by State ASC</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="37.6380577256946,31.2853717026379,111.6127734375,11.609375"
+              BoundingBox="37.6380577256945,31.2853717026379,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14767,7 +15462,7 @@ Order by State ASC</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-36.6358311631943,31.8273381294964,96.3827734375,11.609375"
+              BoundingBox="-36.6358311631944,31.8273381294964,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14792,6 +15487,68 @@ Order by State ASC</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="-21.9413867187501,5,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="156,42.6666666666667"
+          Id="Package\Fact Table\FactSuburbPopulation\Lookup DateKey"
+          TopLeft="255,177.333333333333" />
+        <EdgeLayout
+          Id="Package\Fact Table\FactSuburbPopulation.Paths[OLE DB Source Output]"
+          TopLeft="638,108.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-305,68.6666666666667"
+              Start="0,0"
+              End="-305,61.1666666666667">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,30.3333333333333"
+                    Point2="0,34.3333333333333"
+                    Point3="-4,34.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-301,34.3333333333333" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-301,34.3333333333333"
+                    Point2="-305,34.3333333333333"
+                    Point3="-305,38.3333333333333" />
+                  <mssgle:LineSegment
+                    End="-305,61.1666666666667" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Table\FactSuburbPopulation.Paths[Lookup Match Output2]"
+          TopLeft="411,199">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="40,0"
+              Start="0,0"
+              End="32.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="32.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-31.94138671875,5,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -14933,42 +15690,6 @@ Order by State ASC</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Fact Table\FactSuburbRentalMedian.Paths[OLE DB Source Output]"
-          TopLeft="738,119.666666666667">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-158,76.3333333333333"
-              Start="0,0"
-              End="-158,68.8333333333333">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,34.1666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,34.1666666666667"
-                    Point2="0,38.1666666666667"
-                    Point3="-4,38.1666666666667" />
-                  <mssgle:LineSegment
-                    End="-154,38.1666666666667" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-154,38.1666666666667"
-                    Point2="-158,38.1666666666667"
-                    Point3="-158,42.1666666666667" />
-                  <mssgle:LineSegment
-                    End="-158,68.8333333333333" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Fact Table\FactSuburbRentalMedian.Paths[Lookup No Match Output]"
           TopLeft="855.444444444444,239.666666666667">
           <EdgeLayout.Curve>
@@ -15000,7 +15721,7 @@ Order by State ASC</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-8.69527560763897,31.8273381294964,111.6127734375,11.609375"
+              BoundingBox="-8.69527560763895,31.8273381294964,111.6127734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -15038,6 +15759,40 @@ Order by State ASC</property>
             <mssgm:EdgeLabel
               BoundingBox="-72.1358311631944,31.962829736211,96.3827734375,11.609375"
               RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Fact Table\FactSuburbRentalMedian.Paths[OLE DB Source Output]"
+          TopLeft="738,119.666666666667">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-158,76.3333333333333"
+              Start="0,0"
+              End="-158,68.8333333333333">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,34.1666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,34.1666666666667"
+                    Point2="0,38.1666666666667"
+                    Point3="-4,38.1666666666667" />
+                  <mssgle:LineSegment
+                    End="-154,38.1666666666667" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-154,38.1666666666667"
+                    Point2="-158,38.1666666666667"
+                    Point3="-158,42.1666666666667" />
+                  <mssgle:LineSegment
+                    End="-158,68.8333333333333" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15375,7 +16130,7 @@ Order by State ASC</property>
     design-time-name="Package\Fact Table\StgFactCrimeByYear">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="173.333333333334,42.6666666666667"
           Id="Package\Fact Table\StgFactCrimeByYear\Get Crime from CSV"
@@ -15407,9 +16162,7 @@ Order by State ASC</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -15431,9 +16184,7 @@ Order by State ASC</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -15458,13 +16209,13 @@ Order by State ASC</property>
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="285.333333333334,42.6666666666667"
-          Id="Package\Fact Table\StgFactMedianPropertyValueByYear\Load to StgFactMedianPropertyValueByYear"
-          TopLeft="563.321428611342,264.785714700818" />
-        <NodeLayout
           Size="170.666666666667,42.6666666666667"
           Id="Package\Fact Table\StgFactMedianPropertyValueByYear\Get Data From CSV"
           TopLeft="613.392848002592,98.8571420601436" />
+        <NodeLayout
+          Size="285.333333333334,42.6666666666667"
+          Id="Package\Fact Table\StgFactMedianPropertyValueByYear\Load to StgFactMedianPropertyValueByYear"
+          TopLeft="563.321428611342,264.785714700818" />
         <NodeLayout
           Size="157.333333333334,42.6666666666667"
           Id="Package\Fact Table\StgFactMedianPropertyValueByYear\Data Conversion"
@@ -15700,6 +16451,75 @@ Order by State ASC</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact Table\FactCrimeByYear\Lookup DateKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact Table\FactMedianPropertyValueByYear\Lookup DateKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Fact Table\FactSuburbPopulation\Lookup DateKey">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
