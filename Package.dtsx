@@ -11,8 +11,8 @@
   DTS:LocaleID="3081"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="117"
-  DTS:VersionGUID="{93028EB6-DB5F-4DAC-9804-350037DD3924}">
+  DTS:VersionBuild="118"
+  DTS:VersionGUID="{08ED6C63-1C1B-4AEA-892F-60BCF831C8F9}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -787,7 +787,6 @@
           DTS:refId="Package\DimTable set up\DimAuLocalSchool"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{BB024C60-5EC3-48F8-B1CE-694CDF951228}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -1882,7 +1881,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\DimTable set up\DimTransport"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{9D798927-7CE5-4862-ACAB-FEBF76DE2BE9}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -2984,7 +2982,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\DimTable set up\StgDimAuLocalSchool"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{B75A8437-D9CD-47E5-B92B-1301F384AAB3}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -3677,7 +3674,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\DimTable set up\StgDimTransport"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{E647ABE1-D398-486E-9539-A0D8DA15D347}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -4380,7 +4376,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\Fact Table\FactCrimeByYear"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{F896BD8C-0025-4B22-9FA6-4269F914A093}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -5545,7 +5540,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\Fact Table\FactMedianPropertyValueByYear"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{18619591-72B2-4626-AB8F-5CE8F5C1610D}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -6572,7 +6566,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\Fact Table\FactSuburbPopulation"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{D89CAD71-DA7A-42A6-998D-0DE9F65451DF}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -7492,7 +7485,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\Fact Table\FactSuburbRentalMedian"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{F8820D91-C353-45B7-9ACA-B3A8D748A404}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -8613,7 +8605,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\Fact Table\StgFactCrimeByYear"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{9A6444DB-5147-42A5-94AA-D6D956575D95}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -9383,7 +9374,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\Fact Table\StgFactMedianPropertyValueByYear"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{8264AB83-B766-4678-BCE2-AA98FE15BC08}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -10029,7 +10019,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\Fact Table\StgFactSuburbPopulation"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{18BF4CE5-D157-42FC-9E8D-D48A884C2648}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -10619,7 +10608,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\Fact Table\StgFactSuburbRentalMedian"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{FBA17C68-41AA-4FA6-9F05-455A64C25E40}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -11422,7 +11410,6 @@ where [refTable].[StateCode] = ?</property>
           DTS:refId="Package\Location table set up\DimGeography"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{B9DDACA4-4097-4958-B742-E9D8B3185B90}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -12042,7 +12029,6 @@ where [refTable].[StateName] = ?</property>
           DTS:refId="Package\Location table set up\DimState"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{D59BC363-157B-48E2-B70D-F414301141BB}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -12336,7 +12322,6 @@ Order by State ASC</property>
           DTS:refId="Package\Location table set up\StgDimGeography"
           DTS:CreationName="Microsoft.Pipeline"
           DTS:Description="Data Flow Task"
-          DTS:Disabled="True"
           DTS:DTSID="{BE36EFEF-A468-4465-A586-DBF53DEA5C2C}"
           DTS:ExecutableType="Microsoft.Pipeline"
           DTS:LocaleID="-1"
@@ -13223,10 +13208,10 @@ Order by State ASC</property>
         <NodeLayout
           Size="160,42.6666666666667"
           Id="Package\Fact Table\FactCrimeByYear"
-          TopLeft="29.4062497927811,70.7847261013665" />
+          TopLeft="29.406249792781,70.7847261013664" />
         <EdgeLayout
           Id="Package\Fact Table.PrecedenceConstraints[Constraint 7]"
-          TopLeft="276.124996116385,47.2166703046356">
+          TopLeft="276.124996116385,47.2166703046355">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -13260,13 +13245,13 @@ Order by State ASC</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Fact Table.PrecedenceConstraints[Constraint 8]"
-          TopLeft="189.406249792781,97.8958372124773">
+          TopLeft="189.406249792781,97.8958372124772">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="81.0937464074229,37.0263896821523"
+              EndConnector="81.0937464074228,37.0263896821523"
               Start="0,0"
-              End="73.5937464074229,37.0263896821523">
+              End="73.5937464074228,37.0263896821523">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
@@ -13283,7 +13268,7 @@ Order by State ASC</property>
                     Point2="34.1961581236121,37.0263896821523"
                     Point3="38.1961581236121,37.0263896821523" />
                   <mssgle:LineSegment
-                    End="73.5937464074229,37.0263896821523" />
+                    End="73.5937464074228,37.0263896821523" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13295,7 +13280,7 @@ Order by State ASC</property>
         <NodeLayout
           Size="232,42.6666666666667"
           Id="Package\Fact Table\FactMedianPropertyValueByYear"
-          TopLeft="15.5,260.922225499881" />
+          TopLeft="15.4999999999999,260.922225499881" />
         <EdgeLayout
           Id="Package\Fact Table.PrecedenceConstraints[Constraint 11]"
           TopLeft="272.999996162951,232.450003568231">
@@ -13367,7 +13352,7 @@ Order by State ASC</property>
         <NodeLayout
           Size="182.666666666667,42.6666666666667"
           Id="Package\Fact Table\FactSuburbPopulation"
-          TopLeft="32.3749997485431,370.705558682116" />
+          TopLeft="32.374999748543,370.705558682116" />
         <EdgeLayout
           Id="Package\Fact Table.PrecedenceConstraints[Constraint 13]"
           TopLeft="277.374996097758,333.983336576123">
@@ -13405,7 +13390,7 @@ Order by State ASC</property>
         <NodeLayout
           Size="196.666666666667,42.6666666666667"
           Id="Package\Fact Table\FactSuburbRentalMedian"
-          TopLeft="23.6249998789281,166.305559797915" />
+          TopLeft="23.624999878928,166.305559797915" />
         <EdgeLayout
           Id="Package\Fact Table.PrecedenceConstraints[Constraint 9]"
           TopLeft="270.499996200204,140.700004672407">
@@ -13446,26 +13431,26 @@ Order by State ASC</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="52.7083296173562,33.255554881427"
+              EndConnector="52.7083296173563,33.255554881427"
               Start="0,0"
-              End="45.2083296173562,33.255554881427">
+              End="45.2083296173563,33.255554881427">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="18.2264040555115,0" />
+                    End="18.2264040555114,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="18.2264040555115,0"
-                    Point2="22.2264040555115,0"
-                    Point3="22.2264040555115,4" />
+                    Point1="18.2264040555114,0"
+                    Point2="22.2264040555114,0"
+                    Point3="22.2264040555114,4" />
                   <mssgle:LineSegment
-                    End="22.2264040555115,29.255554881427" />
+                    End="22.2264040555114,29.255554881427" />
                   <mssgle:CubicBezierSegment
-                    Point1="22.2264040555115,29.255554881427"
-                    Point2="22.2264040555115,33.255554881427"
-                    Point3="26.2264040555115,33.255554881427" />
+                    Point1="22.2264040555114,29.255554881427"
+                    Point2="22.2264040555114,33.255554881427"
+                    Point3="26.2264040555114,33.255554881427" />
                   <mssgle:LineSegment
-                    End="45.2083296173562,33.255554881427" />
+                    End="45.2083296173563,33.255554881427" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -13477,7 +13462,7 @@ Order by State ASC</property>
         <NodeLayout
           Size="174.666666666667,42.6666666666667"
           Id="Package\Fact Table\StgFactCrimeByYear"
-          TopLeft="276.124996116385,20.1055591935245" />
+          TopLeft="276.124996116385,20.1055591935244" />
         <NodeLayout
           Size="246.666666666667,42.6666666666667"
           Id="Package\Fact Table\StgFactMedianPropertyValueByYear"
